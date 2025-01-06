@@ -910,7 +910,7 @@
         allImages.forEach(image => {
           if (category === 'all' || image.classList.contains(category)) {
             image.style.display = 'block'; // Tampilkan gambar
-            image.querySelector('img').style.maxWidth = '250px'; // Set ukuran kecil
+            image.querySelector('img').style.maxWidth = '350px'; // Set ukuran kecil
             image.querySelector('img').style.height = 'auto'; // Menjaga rasio aspek
           } else {
             image.style.display = 'none'; // Sembunyikan gambar
