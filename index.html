@@ -834,7 +834,7 @@
                               required
                             ></textarea>
                           </div>
-                          <button type="submit" class="mu-send-msg-btn">
+                          <button type="submit" class="mu-send-msg-btn style="margin-bottom: 25px;">
                             <span>SUBMIT</span>
                           </button>
                           <div style="display: grid; justify-content: center; align-content: center;">
@@ -903,5 +903,21 @@
 
     <!-- Custom js -->
     <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script>
+      function filterImages(category) {
+        const allImages = document.querySelectorAll('.filtr-item');
+        
+        allImages.forEach(image => {
+          if (category === 'all' || image.classList.contains(category)) {
+            image.style.display = 'block'; // Tampilkan gambar
+            image.querySelector('img').style.maxWidth = '250px'; // Set ukuran kecil
+            image.querySelector('img').style.height = 'auto'; // Menjaga rasio aspek
+          } else {
+            image.style.display = 'none'; // Sembunyikan gambar
+          }
+        });
+      }
+      
+    </script>
   </body>
 </html>
